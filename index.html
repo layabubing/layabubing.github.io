@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hourun Wu / layabubing 的个人介绍网站，展示编程项目、技术兴趣与 GitHub 作品。">
+    <meta name="theme-color" content="#f7f3ea">
+    <title>Hourun Wu | layabubing</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="回到顶部">
+        <span class="brand-mark">lb</span>
+        <span>layabubing</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#projects">项目</a>
+        <a href="#stack">技术</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-visual" aria-hidden="true">
+          <div class="code-window">
+            <div class="window-controls">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>class Builder:
+    focus = "local-first tools"
+    language = "Python"
+
+    def ship(self):
+        return ["AI practice", "Pomodoro", "tiny GPT"]</code></pre>
+          </div>
+        </div>
+
+        <div class="hero-copy">
+          <img class="avatar" src="assets/avatar.png" width="112" height="112" alt="layabubing 的 GitHub 头像">
+          <p class="eyebrow">GitHub: @layabubing</p>
+          <h1 id="hero-title">Hourun Wu</h1>
+          <p class="lead">
+            一个把想法写成工具的开发者。公开项目聚焦 Python、本地优先应用、AI 交互和学习效率：从英语口语练习，到番茄钟专注系统，再到自己动手训练的迷你 GPT。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/layabubing" target="_blank" rel="noreferrer">访问 GitHub</a>
+            <a class="button secondary" href="#projects">查看作品</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="GitHub 公开资料概览">
+        <article>
+          <strong>6</strong>
+          <span>公开仓库</span>
+        </article>
+        <article>
+          <strong>2022</strong>
+          <span>开始在 GitHub 创作</span>
+        </article>
+        <article>
+          <strong>Python</strong>
+          <span>主要项目语言</span>
+        </article>
+      </section>
+
+      <section class="section intro-section" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2 id="intro-title">喜欢把日常需求变成可以运行的东西</h2>
+        </div>
+        <div class="intro-copy">
+          <p>
+            从仓库轨迹看，layabubing 更像是一个持续做实验的独立开发者：愿意把 AI、桌面 UI、WebView、本地数据保存、任务管理这些模块拆开学习，再组合成能解决真实问题的小工具。
+          </p>
+          <p>
+            作品里有明显的个人关切：更好地练习英语，更专注地学习和工作，更深入地理解 Transformer 模型。网站因此不包装成夸张履历，而是把这些探索清楚地摆出来。
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2 id="projects-title">代表项目</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-meta">
+              <span>Python</span>
+              <span>2026</span>
+            </div>
+            <h3>Concentrate-On</h3>
+            <p>
+              本地运行的专注工具，包含专注计时、番茄钟、任务管理、统计记录、网站屏蔽和主题设置。前端使用本地 Vue 运行时，状态保存在本机。
+            </p>
+            <a href="https://github.com/layabubing/Concentrate-On" target="_blank" rel="noreferrer">查看仓库</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Python</span>
+              <span>AI</span>
+            </div>
+            <h3>Free-talk-to-AI</h3>
+            <p>
+              免费开源的 AI 英语口语练习平台，接入 ChatGLM API，结合 WebView、语音生成与音频播放，让用户可以和 AI 练习对话。
+            </p>
+            <a href="https://github.com/layabubing/Free-talk-to-AI" target="_blank" rel="noreferrer">查看仓库</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Python</span>
+              <span>Transformer</span>
+            </div>
+            <h3>HaGPT</h3>
+            <p>
+              基于 Transformer 架构的迷你 GPT 实验项目。仓库说明里记录了模型、训练代码和调试过程，是一次从框架到训练的学习实践。
+            </p>
+            <a href="https://github.com/layabubing/HaGPT" target="_blank" rel="noreferrer">查看仓库</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Python</span>
+              <span>Sports Data</span>
+            </div>
+            <h3>Which-Game</h3>
+            <p>
+              一个围绕球员进球场次查询的小项目，用清晰的问题入口把体育数据探索做成可尝试的工具。
+            </p>
+            <a href="https://github.com/layabubing/Which-Game" target="_blank" rel="noreferrer">查看仓库</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section stack-section" id="stack" aria-labelledby="stack-title">
+        <div class="section-heading">
+          <p class="eyebrow">Stack</p>
+          <h2 id="stack-title">技术脉络</h2>
+        </div>
+        <div class="stack-list">
+          <article>
+            <span>01</span>
+            <h3>Python 应用开发</h3>
+            <p>HTTP 服务、桌面窗口、WebView、多线程、文件状态管理和脚本化工作流。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>AI 产品实验</h3>
+            <p>ChatGLM API、语音合成、Markdown 渲染、对话体验和 Transformer 模型训练。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>本地优先体验</h3>
+            <p>把个人数据留在本机，让工具启动快、依赖少、能在日常场景里直接使用。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">继续关注作品更新</h2>
+          <p>公开资料暂未填写邮箱或个人博客，最直接的入口是 GitHub 主页和仓库 Issues。</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub 主页</a>
+          <a class="button secondary" href="https://github.com/layabubing?tab=repositories" target="_blank" rel="noreferrer">全部仓库</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Built for GitHub Pages.</span>
+      <a href="#top">返回顶部</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
