@@ -211,8 +211,8 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.03fr) minmax(340px, 0.97fr);
-  gap: 44px 62px;
+  grid-template-columns: minmax(0, 1fr) minmax(460px, 0.8fr);
+  gap: 44px 44px;
   align-items: center;
   width: min(var(--maxw), calc(100% - 40px));
   min-height: calc(100svh - 64px);
@@ -241,7 +241,7 @@ p {
 
 h1 {
   margin-bottom: 24px;
-  font-size: clamp(3.2rem, 8.5vw, 6.8rem);
+  font-size: clamp(3.2rem, 8.5vw, 5.6rem);
   line-height: 0.9;
   letter-spacing: -0.055em;
   font-weight: 720;
@@ -937,6 +937,18 @@ h3 {
   transform: translateY(0);
 }
 
+@media (max-width: 1119px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding-top: 72px;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+}
+
 @media (max-width: 920px) {
   .site-header {
     grid-template-columns: 1fr auto;
@@ -980,6 +992,11 @@ h3 {
   .tech-card {
     height: 350px;
     --radius-a: 92px;
+    --radius-b: 146px;
+  }
+
+  .hero .tech-card {
+    --radius-a: 118px;
     --radius-b: 146px;
   }
 
@@ -1122,13 +1139,13 @@ h3 {
   .tech-card {
     height: 300px;
     --radius-a: 78px;
-    --radius-b: 124px;
+    --radius-b: 110px;
   }
 
   .hero .tech-card {
     height: 320px;
     --radius-a: 92px;
-    --radius-b: 146px;
+    --radius-b: 122px;
   }
 
   .stack-notes {
