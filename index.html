@@ -3,236 +3,343 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Hourun Wu（layabubing）的个人主页：Python、SSVEP 脑机接口、计算机视觉与桌面工具。">
-    <meta name="theme-color" content="#0a1117">
-    <title>Hourun Wu | layabubing</title>
+    <meta
+      name="description"
+      content="Downloading的个人主页。主要写 Python，方向包括 SSVEP 脑机接口、计算机视觉，也会做自己用得上的桌面工具。"
+    >
+    <meta name="theme-color" content="#08090b">
+    <title>Downloading / layabubing</title>
     <link rel="icon" href="assets/avatar.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="page-backdrop" aria-hidden="true"></div>
-
     <header class="site-header" id="top">
       <a class="brand" href="#top" aria-label="回到顶部">
-        <img src="assets/avatar.png" width="36" height="36" alt="">
+        <img src="assets/avatar.png" width="30" height="30" alt="">
         <span>layabubing</span>
       </a>
       <nav class="site-nav" aria-label="主导航">
+        <a href="#about">关于</a>
         <a href="#projects">项目</a>
         <a href="#stack">技术</a>
         <a href="#contact">联系</a>
       </nav>
-      <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换浅色模式" aria-pressed="false">
+          <span>LIGHT</span>
+        </button>
+        <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy reveal">
-          <div class="identity-line">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span>GitHub / @layabubing</span>
-          </div>
-          <h1 id="hero-title">Hourun<br>Wu.</h1>
-          <p class="role">Python 开发者，正在做脑机接口实验软件。</p>
+        <div class="hero-copy">
+          <p class="eyebrow">PERSONAL SITE / 2026</p>
+          <h1 id="hero-title">Downloading</h1>
+          <p class="role">Python · BCI · Computer Vision · Desktop tools</p>
           <p class="lead">
-            最近的代码集中在 SSVEP 刺激呈现、异步识别和实时目标检测。也写桌面工具，通常从自己需要的功能开始。
+            最近在写 SSVEP 刺激呈现、异步识别和目标检测，也会做一些自己真正会用的桌面软件。
+            代码都放在 GitHub。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects">查看项目</a>
-            <a class="button button-quiet" href="mailto:laya_download@163.com">发送邮件</a>
+            <a class="button button-primary" href="#projects">看项目</a>
+            <a class="button button-quiet" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button button-quiet" href="mailto:laya_download@163.com">写邮件</a>
           </div>
         </div>
 
-        <aside class="current-panel glass-panel reveal" aria-label="近期仓库">
-          <div class="panel-head">
-            <span>RECENT REPOSITORIES</span>
-            <span>2026</span>
-          </div>
-          <a class="repo-line" href="https://github.com/layabubing/SSVEP-Studio" target="_blank" rel="noreferrer">
-            <span class="repo-index">01</span>
-            <span>
-              <strong>SSVEP-Studio</strong>
-              <small>刺激设计与逐帧呈现</small>
-            </span>
-            <span class="repo-mark">BCI</span>
-          </a>
-          <a class="repo-line" href="https://github.com/layabubing/Asynchronous-SSVEP-BCI-SDK" target="_blank" rel="noreferrer">
-            <span class="repo-index">02</span>
-            <span>
-              <strong>Async SSVEP SDK</strong>
-              <small>CCA / FBCCA 实时识别</small>
-            </span>
-            <span class="repo-mark">SDK</span>
-          </a>
-          <a class="repo-line" href="https://github.com/layabubing/YOLO26n-Studio" target="_blank" rel="noreferrer">
-            <span class="repo-index">03</span>
-            <span>
-              <strong>YOLO26n-Studio</strong>
-              <small>本地目标检测 GUI</small>
-            </span>
-            <span class="repo-mark">CV</span>
-          </a>
-          <a class="repo-line" href="https://github.com/layabubing/LyricBookGenerator" target="_blank" rel="noreferrer">
-            <span class="repo-index">04</span>
-            <span>
-              <strong>LyricBookGenerator</strong>
-              <small>搜索、整理与导出歌词</small>
-            </span>
-            <span class="repo-mark">APP</span>
-          </a>
-        </aside>
+        <div class="tech-card" aria-label="技术栈轨道图">
+          <div class="tech-ring tech-ring-a"></div>
+          <div class="tech-ring tech-ring-b"></div>
 
-        <div class="hero-stats glass-strip reveal" aria-label="GitHub 资料概览">
-          <div><strong>10</strong><span>公开仓库</span></div>
-          <div><strong>2022</strong><span>加入 GitHub</span></div>
-          <div><strong>Python</strong><span>主要语言</span></div>
-          <div><strong>CN / EN</strong><span>项目文档</span></div>
+          <div class="tech-core tech-core-avatar" aria-hidden="true">
+            <img src="assets/avatar.png" alt="">
+          </div>
+
+          <div class="tech-orbit tech-orbit-a" aria-hidden="true">
+            <span class="tech-node" style="--angle: 0deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=python" alt="Python"></span>
+            </span>
+            <span class="tech-node" style="--angle: 90deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch"></span>
+            </span>
+            <span class="tech-node" style="--angle: 180deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow"></span>
+            </span>
+            <span class="tech-node" style="--angle: 270deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=typescript" alt="TypeScript"></span>
+            </span>
+          </div>
+
+          <div class="tech-orbit tech-orbit-b" aria-hidden="true">
+            <span class="tech-node" style="--angle: 0deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=vscode" alt="VSCode"></span>
+            </span>
+            <span class="tech-node" style="--angle: 60deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js"></span>
+            </span>
+            <span class="tech-node" style="--angle: 120deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=electron" alt="Electron"></span>
+            </span>
+            <span class="tech-node" style="--angle: 180deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=react" alt="React"></span>
+            </span>
+            <span class="tech-node" style="--angle: 240deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=vue" alt="Vue"></span>
+            </span>
+            <span class="tech-node" style="--angle: 300deg">
+              <span class="node-disc"><img src="https://skillicons.dev/icons?i=cloudflare" alt="CloudFlare"></span>
+            </span>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">SELECTED WORK</p>
+      <div class="paper">
+        <section class="block" id="about" aria-labelledby="about-title">
+          <div class="block-head">
+            <h2 id="about-title">关于</h2>
+            <span class="block-index">01</span>
+          </div>
+
+          <div class="about-layout">
+            <p class="about-copy">
+              我是 Downloading，GitHub 上叫 layabubing。主要用 Python，方向偏脑机接口和计算机视觉，
+              也写一些只在本地跑的桌面工具。项目通常是先解决自己遇到的问题，再整理成仓库。
+            </p>
+            <div class="mini-stats" aria-label="GitHub 资料概览">
+              <div><strong>10</strong><span>公开仓库</span></div>
+              <div><strong>2022</strong><span>加入 GitHub</span></div>
+              <div><strong>Python</strong><span>主要语言</span></div>
+              <div><strong>CN / EN</strong><span>项目文档</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="projects" aria-labelledby="projects-title">
+          <div class="block-head">
             <h2 id="projects-title">项目</h2>
+            <span class="block-index">02</span>
           </div>
-          <p>按当前仓库内容整理，最近项目优先。</p>
-        </div>
 
-        <div class="project-grid">
-          <article class="project-card project-featured glass-panel reveal">
-            <div class="card-topline">
-              <span>01 / BCI</span>
-              <span class="status status-active">近期项目</span>
-            </div>
-            <div class="project-body">
-              <div>
-                <h3>SSVEP-Studio</h3>
-                <p>实验级 SSVEP 刺激设计器。PyQt6 负责配置，PsychoPy 独立进程负责 VBL 同步的逐帧呈现，并记录帧间隔、掉帧和实验事件。</p>
+          <div class="project-list">
+            <article class="project-row project-row-featured">
+              <div class="row-meta">
+                <span class="row-index">01</span>
+                <span class="row-tag">BCI</span>
               </div>
-              <ul class="fact-list" aria-label="项目特性">
-                <li>PyQt6 / PsychoPy</li>
-                <li>JSONL / UDP 事件输出</li>
-                <li>对接异步 SSVEP SDK</li>
-              </ul>
-            </div>
-            <a class="project-link" href="https://github.com/layabubing/SSVEP-Studio" target="_blank" rel="noreferrer">打开仓库</a>
-          </article>
+              <div class="row-body">
+                <div class="row-title-line">
+                  <h3>SSVEP-Studio</h3>
+                  <span class="status status-active">最近在做</span>
+                </div>
+                <p>
+                  SSVEP 刺激设计器。PyQt6 负责参数和布局，PsychoPy 在独立进程里做 VBL 同步的逐帧呈现，
+                  顺带记录帧间隔、掉帧和实验事件。
+                </p>
+                <ul class="tag-row" aria-label="技术标签">
+                  <li>PyQt6</li>
+                  <li>PsychoPy</li>
+                  <li>JSONL / UDP</li>
+                </ul>
+              </div>
+              <a class="row-link" href="https://github.com/layabubing/SSVEP-Studio" target="_blank" rel="noreferrer">打开仓库</a>
+            </article>
 
-          <article class="project-card glass-panel reveal">
-            <div class="card-topline">
-              <span>02 / SDK</span>
-              <span class="status status-active">近期项目</span>
-            </div>
-            <h3>Asynchronous SSVEP BCI SDK</h3>
-            <p>无需训练的实时频率识别实现。提供 CCA、FBCCA、流式滑窗和独立异步状态机，只在满足阈值与驻留条件时触发命令。</p>
-            <div class="tag-row"><span>NumPy</span><span>SciPy</span><span>Python 3.10+</span></div>
-            <a class="project-link" href="https://github.com/layabubing/Asynchronous-SSVEP-BCI-SDK" target="_blank" rel="noreferrer">打开仓库</a>
-          </article>
+            <article class="project-row">
+              <div class="row-meta">
+                <span class="row-index">02</span>
+                <span class="row-tag">SDK</span>
+              </div>
+              <div class="row-body">
+                <div class="row-title-line">
+                  <h3>Asynchronous SSVEP BCI SDK</h3>
+                  <span class="status status-active">最近在做</span>
+                </div>
+                <p>
+                  无训练实时识别。提供 CCA、FBCCA、流式滑窗和异步状态机，只有候选频率同时通过分数、
+                  裕量和驻留条件时，才输出一次命令。
+                </p>
+                <ul class="tag-row" aria-label="技术标签">
+                  <li>NumPy</li>
+                  <li>SciPy</li>
+                  <li>Python 3.10+</li>
+                </ul>
+              </div>
+              <a class="row-link" href="https://github.com/layabubing/Asynchronous-SSVEP-BCI-SDK" target="_blank" rel="noreferrer">打开仓库</a>
+            </article>
 
-          <article class="project-card glass-panel reveal">
-            <div class="card-topline">
-              <span>03 / CV</span>
-              <span class="status status-active">近期项目</span>
-            </div>
-            <h3>YOLO26n-Studio</h3>
-            <p>可直接运行的目标检测 GUI 与命令行工具，支持图片、视频、摄像头和网络流，显示 FPS、延迟、类别与目标数量。</p>
-            <div class="tag-row"><span>PySide6</span><span>Ultralytics</span><span>Streaming</span></div>
-            <a class="project-link" href="https://github.com/layabubing/YOLO26n-Studio" target="_blank" rel="noreferrer">打开仓库</a>
-          </article>
+            <article class="project-row">
+              <div class="row-meta">
+                <span class="row-index">03</span>
+                <span class="row-tag">CV</span>
+              </div>
+              <div class="row-body">
+                <div class="row-title-line">
+                  <h3>YOLO26n-Studio</h3>
+                  <span class="status status-active">最近在做</span>
+                </div>
+                <p>
+                  一个能直接跑的目标检测项目。支持图片、视频、摄像头和网络流，GUI 显示 FPS、延迟、
+                  类别和目标数量，也可以拿自己的权重来做验证或导出。
+                </p>
+                <ul class="tag-row" aria-label="技术标签">
+                  <li>PySide6</li>
+                  <li>Ultralytics</li>
+                  <li>Streaming</li>
+                </ul>
+              </div>
+              <a class="row-link" href="https://github.com/layabubing/YOLO26n-Studio" target="_blank" rel="noreferrer">打开仓库</a>
+            </article>
 
-          <article class="project-card glass-panel reveal">
-            <div class="card-topline">
-              <span>04 / DESKTOP</span>
-              <span class="status">工具</span>
-            </div>
-            <h3>LyricBookGenerator</h3>
-            <p>桌面歌词搜索与整理工具，使用 iTunes Search API 和 LRCLIB，可将歌词本导出为 Markdown、Word 或 PDF。</p>
-            <div class="tag-row"><span>Electron</span><span>Node.js</span><span>PDFKit</span></div>
-            <a class="project-link" href="https://github.com/layabubing/LyricBookGenerator" target="_blank" rel="noreferrer">打开仓库</a>
-          </article>
+            <article class="project-row">
+              <div class="row-meta">
+                <span class="row-index">04</span>
+                <span class="row-tag">DESKTOP</span>
+              </div>
+              <div class="row-body">
+                <div class="row-title-line">
+                  <h3>APIKeyMemory</h3>
+                  <span class="status status-active">最近在做</span>
+                </div>
+                <p>
+                  本地加密的 API Key 管理器。Tauri + React 搭界面，Node 核心只在本机运行；支持加密备份、
+                  导入导出和轮换提醒，密钥不会明文落盘。
+                </p>
+                <ul class="tag-row" aria-label="技术标签">
+                  <li>Tauri</li>
+                  <li>React</li>
+                  <li>Node.js</li>
+                </ul>
+              </div>
+              <a class="row-link" href="https://github.com/layabubing/APIKeyMemory" target="_blank" rel="noreferrer">打开仓库</a>
+            </article>
 
-          <article class="project-card glass-panel reveal">
-            <div class="card-topline">
-              <span>05 / LOCAL APP</span>
-              <span class="status status-wip">进行中</span>
-            </div>
-            <h3>Concentrate-On</h3>
-            <p>本地专注工具，包含计时、番茄钟、任务、统计和网站屏蔽。Python 提供轻量 HTTP 服务，Vue 界面与数据均保存在本机。</p>
-            <div class="tag-row"><span>Python</span><span>Vue</span><span>Local-first</span></div>
-            <a class="project-link" href="https://github.com/layabubing/Concentrate-On" target="_blank" rel="noreferrer">打开仓库</a>
-          </article>
+            <article class="project-row">
+              <div class="row-meta">
+                <span class="row-index">05</span>
+                <span class="row-tag">TOOL</span>
+              </div>
+              <div class="row-body">
+                <div class="row-title-line">
+                  <h3>LyricBookGenerator</h3>
+                  <span class="status">工具</span>
+                </div>
+                <p>
+                  歌词搜索和整理工具。用 iTunes Search API 搜元数据，再从 LRCLIB 抓歌词，最后按自定义顺序
+                  导出成 Markdown、Word 或 PDF。
+                </p>
+                <ul class="tag-row" aria-label="技术标签">
+                  <li>Electron</li>
+                  <li>Node.js</li>
+                  <li>PDFKit</li>
+                </ul>
+              </div>
+              <a class="row-link" href="https://github.com/layabubing/LyricBookGenerator" target="_blank" rel="noreferrer">打开仓库</a>
+            </article>
 
-          <article class="project-card glass-panel reveal">
-            <div class="card-topline">
-              <span>06 / MODEL</span>
-              <span class="status status-done">已完成</span>
-            </div>
-            <h3>HaGPT</h3>
-            <p>一个小型 Transformer 训练实验。模型主体、输入数据和训练代码都放在仓库中，用来跑通最基础的文本生成流程。</p>
-            <div class="tag-row"><span>Python</span><span>Transformer</span></div>
-            <a class="project-link" href="https://github.com/layabubing/HaGPT" target="_blank" rel="noreferrer">打开仓库</a>
-          </article>
-        </div>
-
-        <div class="archive glass-panel reveal" aria-labelledby="archive-title">
-          <div>
-            <p class="eyebrow">ARCHIVE</p>
-            <h3 id="archive-title">早期项目</h3>
+            <article class="project-row">
+              <div class="row-meta">
+                <span class="row-index">06</span>
+                <span class="row-tag">LOCAL APP</span>
+              </div>
+              <div class="row-body">
+                <div class="row-title-line">
+                  <h3>Concentrate-On</h3>
+                  <span class="status status-wip">进行中</span>
+                </div>
+                <p>
+                  本地专注工具。有计时、番茄钟、任务、统计和网站屏蔽；Python 起一个轻量 HTTP 服务，
+                  Vue 界面和数据都保存在本机。
+                </p>
+                <ul class="tag-row" aria-label="技术标签">
+                  <li>Python</li>
+                  <li>Vue</li>
+                  <li>Local-first</li>
+                </ul>
+              </div>
+              <a class="row-link" href="https://github.com/layabubing/Concentrate-On" target="_blank" rel="noreferrer">打开仓库</a>
+            </article>
           </div>
-          <a href="https://github.com/layabubing/Free-talk-to-AI" target="_blank" rel="noreferrer">
-            <span>Free-talk-to-AI</span><small>AI 英语口语练习 / 已停止维护</small>
-          </a>
-          <a href="https://github.com/layabubing/Which-Game" target="_blank" rel="noreferrer">
-            <span>Which-Game</span><small>球员进球场次查询 / 已停止维护</small>
-          </a>
-        </div>
-      </section>
 
-      <section class="section" id="stack" aria-labelledby="stack-title">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">TOOLKIT</p>
-            <h2 id="stack-title">现在使用的技术</h2>
+          <div class="archive" aria-labelledby="archive-title">
+            <p class="eyebrow">ARCHIVE / 早期</p>
+            <h3 id="archive-title">已经停下来的东西</h3>
+            <div class="archive-links">
+              <a href="https://github.com/layabubing/Free-talk-to-AI" target="_blank" rel="noreferrer">
+                <span>Free-talk-to-AI</span>
+                <small>AI 英语口语练习 / 停止维护</small>
+              </a>
+              <a href="https://github.com/layabubing/Which-Game" target="_blank" rel="noreferrer">
+                <span>Which-Game</span>
+                <small>球员进球场次查询 / 停止维护</small>
+              </a>
+              <a href="https://github.com/layabubing/HaGPT" target="_blank" rel="noreferrer">
+                <span>HaGPT</span>
+                <small>小号 Transformer 文本生成实验</small>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="stack-grid">
-          <article class="stack-card glass-panel reveal">
-            <span class="stack-number">01</span>
-            <h3>脑机接口</h3>
-            <p>PsychoPy、PyQt6、CCA / FBCCA、NumPy、SciPy，以及刺激事件与 EEG 采集接口。</p>
-          </article>
-          <article class="stack-card glass-panel reveal">
-            <span class="stack-number">02</span>
-            <h3>桌面与本地工具</h3>
-            <p>PySide6、Electron、Node.js、本地 HTTP 服务、文件存储与多格式文档导出。</p>
-          </article>
-          <article class="stack-card glass-panel reveal">
-            <span class="stack-number">03</span>
-            <h3>计算机视觉</h3>
-            <p>Ultralytics YOLO、摄像头与网络流输入、低延迟最新帧处理和模型格式导出。</p>
-          </article>
-        </div>
-      </section>
+        </section>
 
-      <section class="contact-section glass-panel reveal" id="contact" aria-labelledby="contact-title">
-        <div class="contact-copy">
-          <p class="eyebrow">CONTACT</p>
-          <h2 id="contact-title">联系我</h2>
-          <p>项目问题可以直接在对应仓库开 Issue；其他事情可以发邮件。</p>
-        </div>
-        <div class="contact-list">
-          <a href="mailto:laya_download@163.com"><span>Email 01</span><strong>laya_download@163.com</strong></a>
-          <a href="mailto:layabubing@gmail.com"><span>Email 02</span><strong>layabubing@gmail.com</strong></a>
-          <a href="https://github.com/layabubing" target="_blank" rel="noreferrer"><span>Profile</span><strong>github.com/layabubing</strong></a>
-        </div>
-      </section>
+        <section class="block" id="stack" aria-labelledby="stack-title">
+          <div class="block-head">
+            <h2 id="stack-title">技术</h2>
+            <span class="block-index">03</span>
+          </div>
+
+          <div class="stack-layout">
+            <div class="stack-notes">
+              <article class="stack-note">
+                <span class="stack-index-number">01</span>
+                <h3>脑机接口</h3>
+                <p>PsychoPy、PyQt6、CCA / FBCCA、NumPy、SciPy，以及刺激事件和 EEG 采集的对接。</p>
+              </article>
+              <article class="stack-note">
+                <span class="stack-index-number">02</span>
+                <h3>桌面与本地工具</h3>
+                <p>PySide6、Electron、Tauri、Node.js、本地 HTTP 服务、文件存储与文档导出。</p>
+              </article>
+              <article class="stack-note">
+                <span class="stack-index-number">03</span>
+                <h3>计算机视觉</h3>
+                <p>Ultralytics YOLO、摄像头和网络流输入、低延迟最新帧处理与模型格式导出。</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="contact" aria-labelledby="contact-title">
+          <div class="block-head">
+            <h2 id="contact-title">联系</h2>
+            <span class="block-index">04</span>
+          </div>
+
+          <div class="contact-layout">
+            <p>项目问题优先在对应仓库开 Issue，这样讨论会留在项目里。其他事情发邮件就行。</p>
+            <div class="contact-list">
+              <a href="mailto:laya_download@163.com">
+                <span>Email 01</span>
+                <strong>laya_download@163.com</strong>
+              </a>
+              <a href="mailto:layabubing@gmail.com">
+                <span>Email 02</span>
+                <strong>layabubing@gmail.com</strong>
+              </a>
+              <a href="https://github.com/layabubing" target="_blank" rel="noreferrer">
+                <span>Profile</span>
+                <strong>github.com/layabubing</strong>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
-      <span>Hourun Wu / layabubing</span>
-      <span>GitHub Pages</span>
-      <a href="#top">返回顶部</a>
+      <span>Downloading / layabubing</span>
+      <span>Hosted on GitHub Pages</span>
+      <a href="#top">回到顶部</a>
     </footer>
 
     <script src="script.js"></script>

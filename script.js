@@ -1,11 +1,38 @@
 const header = document.querySelector(".site-header");
+const themeToggle = document.querySelector("#theme-toggle");
 const revealItems = document.querySelectorAll(".reveal");
-const sections = document.querySelectorAll("main section[id]");
+const sections = document.querySelectorAll(".paper section[id]");
 const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
-const glassPanels = document.querySelectorAll(".glass-panel");
+
+const getStoredTheme = () => localStorage.getItem("layabubing-theme");
+
+const applyTheme = (theme, persist = false) => {
+  document.documentElement.setAttribute("data-theme", theme);
+
+  if (themeToggle) {
+    const isLight = theme === "light";
+    themeToggle.setAttribute("aria-pressed", String(isLight));
+    themeToggle.setAttribute("aria-label", isLight ? "切换深色模式" : "切换浅色模式");
+    themeToggle.querySelector("span").textContent = isLight ? "DARK" : "LIGHT";
+  }
+
+  if (persist) {
+    localStorage.setItem("layabubing-theme", theme);
+  }
+};
+
+const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+const urlTheme = new URLSearchParams(window.location.search).get("theme");
+const initialTheme = urlTheme === "light" || urlTheme === "dark" ? urlTheme : getStoredTheme() || preferredTheme;
+applyTheme(initialTheme);
+
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+  applyTheme(nextTheme, true);
+});
 
 const updateHeader = () => {
-  header?.classList.toggle("is-scrolled", window.scrollY > 16);
+  header?.classList.toggle("is-scrolled", window.scrollY > 12);
 };
 
 updateHeader();
@@ -29,11 +56,11 @@ const revealObserver = new IntersectionObserver(
       revealObserver.unobserve(entry.target);
     });
   },
-  { threshold: 0.12, rootMargin: "0px 0px -40px" },
+  { threshold: 0.12, rootMargin: "0px 0px -36px" },
 );
 
 revealItems.forEach((item, index) => {
-  item.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+  item.style.transitionDelay = `${Math.min(index % 4, 3) * 60}ms`;
   revealObserver.observe(item);
 });
 
@@ -50,11 +77,3 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => sectionObserver.observe(section));
-
-glassPanels.forEach((panel) => {
-  panel.addEventListener("pointermove", (event) => {
-    const rect = panel.getBoundingClientRect();
-    panel.style.setProperty("--mx", `${event.clientX - rect.left}px`);
-    panel.style.setProperty("--my", `${event.clientY - rect.top}px`);
-  });
-});
