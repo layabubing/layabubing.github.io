@@ -7,15 +7,21 @@
       name="description"
       content="Downloading的个人主页。主要写 Python，方向包括 SSVEP 脑机接口、计算机视觉，也会做自己用得上的桌面工具。"
     >
-    <meta name="theme-color" content="#08090b">
+    <meta name="theme-color" content="#f7f5ef">
     <title>Downloading / layabubing</title>
     <link rel="icon" href="assets/avatar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header" id="top">
       <a class="brand" href="#top" aria-label="回到顶部">
-        <img src="assets/avatar.png" width="30" height="30" alt="">
+        <img src="assets/avatar.png" width="28" height="28" alt="">
         <span>layabubing</span>
       </a>
       <nav class="site-nav" aria-label="主导航">
@@ -24,82 +30,29 @@
         <a href="#stack">技术</a>
         <a href="#contact">联系</a>
       </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换浅色模式" aria-pressed="false">
-          <span>LIGHT</span>
-        </button>
-        <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
+      <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">PERSONAL SITE / 2026</p>
-          <h1 id="hero-title">Downloading</h1>
-          <p class="role">Python · BCI · Computer Vision · Desktop tools</p>
-          <p class="lead">
-            最近在写 SSVEP 刺激呈现、异步识别和目标检测，也会做一些自己真正会用的桌面软件。
-            代码都放在 GitHub。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects">看项目</a>
-            <a class="button button-quiet" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="button button-quiet" href="mailto:laya_download@163.com">写邮件</a>
-          </div>
-        </div>
-
-        <div class="tech-card" aria-label="技术栈轨道图">
-          <div class="tech-ring tech-ring-a"></div>
-          <div class="tech-ring tech-ring-b"></div>
-
-          <div class="tech-core tech-core-avatar" aria-hidden="true">
-            <img src="assets/avatar.png" alt="">
-          </div>
-
-          <div class="tech-orbit tech-orbit-a" aria-hidden="true">
-            <span class="tech-node" style="--angle: 0deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=python" alt="Python"></span>
-            </span>
-            <span class="tech-node" style="--angle: 90deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch"></span>
-            </span>
-            <span class="tech-node" style="--angle: 180deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow"></span>
-            </span>
-            <span class="tech-node" style="--angle: 270deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=typescript" alt="TypeScript"></span>
-            </span>
-          </div>
-
-          <div class="tech-orbit tech-orbit-b" aria-hidden="true">
-            <span class="tech-node" style="--angle: 0deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=vscode" alt="VSCode"></span>
-            </span>
-            <span class="tech-node" style="--angle: 60deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js"></span>
-            </span>
-            <span class="tech-node" style="--angle: 120deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=electron" alt="Electron"></span>
-            </span>
-            <span class="tech-node" style="--angle: 180deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=react" alt="React"></span>
-            </span>
-            <span class="tech-node" style="--angle: 240deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=vue" alt="Vue"></span>
-            </span>
-            <span class="tech-node" style="--angle: 300deg">
-              <span class="node-disc"><img src="https://skillicons.dev/icons?i=cloudflare" alt="CloudFlare"></span>
-            </span>
-          </div>
+      <section class="hero reveal" aria-labelledby="hero-title">
+        <p class="eyebrow">个人主页 · Personal Site</p>
+        <h1 id="hero-title">Downloading</h1>
+        <p class="role">Python · 脑机接口 · 计算机视觉 · 桌面工具</p>
+        <p class="lead">
+          最近在写 SSVEP 刺激呈现、异步识别和目标检测，也会做一些自己真正会用的桌面软件。
+          代码都放在 GitHub。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">看看项目</a>
+          <a class="button button-quiet" href="mailto:laya_download@163.com">写邮件</a>
         </div>
       </section>
 
       <div class="paper">
-        <section class="block" id="about" aria-labelledby="about-title">
+        <section class="block reveal" id="about" aria-labelledby="about-title">
           <div class="block-head">
             <h2 id="about-title">关于</h2>
-            <span class="block-index">01</span>
+            <span class="block-index">壹</span>
           </div>
 
           <div class="about-layout">
@@ -107,19 +60,19 @@
               我是 Downloading，GitHub 上叫 layabubing。主要用 Python，方向偏脑机接口和计算机视觉，
               也写一些只在本地跑的桌面工具。项目通常是先解决自己遇到的问题，再整理成仓库。
             </p>
-            <div class="mini-stats" aria-label="GitHub 资料概览">
-              <div><strong>10</strong><span>公开仓库</span></div>
-              <div><strong>2022</strong><span>加入 GitHub</span></div>
-              <div><strong>Python</strong><span>主要语言</span></div>
-              <div><strong>CN / EN</strong><span>项目文档</span></div>
-            </div>
+            <dl class="mini-stats" aria-label="GitHub 资料概览">
+              <div><dt>公开仓库</dt><dd>10</dd></div>
+              <div><dt>加入 GitHub</dt><dd>2022</dd></div>
+              <div><dt>主要语言</dt><dd>Python</dd></div>
+              <div><dt>项目文档</dt><dd>中 / 英</dd></div>
+            </dl>
           </div>
         </section>
 
-        <section class="block" id="projects" aria-labelledby="projects-title">
+        <section class="block reveal" id="projects" aria-labelledby="projects-title">
           <div class="block-head">
             <h2 id="projects-title">项目</h2>
-            <span class="block-index">02</span>
+            <span class="block-index">贰</span>
           </div>
 
           <div class="project-list">
@@ -288,7 +241,7 @@
           <div class="org-projects" aria-labelledby="org-title">
             <div class="org-head">
               <div>
-                <p class="eyebrow">PHASORTEAM / 组织仓库</p>
+                <p class="eyebrow">PhasorTeam · 组织仓库</p>
                 <h3 id="org-title">PhasorTeam 组织项目</h3>
               </div>
               <a class="row-link" href="https://github.com/PhasorTeam" target="_blank" rel="noreferrer">组织主页</a>
@@ -343,8 +296,10 @@
 
           </div>
           <div class="archive" aria-labelledby="archive-title">
-            <p class="eyebrow">ARCHIVE / 早期</p>
-            <h3 id="archive-title">已经停下来的东西</h3>
+            <div>
+              <p class="eyebrow">归档 · 早期</p>
+              <h3 id="archive-title">已经停下来的东西</h3>
+            </div>
             <div class="archive-links">
               <a href="https://github.com/layabubing/Free-talk-to-AI" target="_blank" rel="noreferrer">
                 <span>Free-talk-to-AI</span>
@@ -358,52 +313,50 @@
           </div>
         </section>
 
-        <section class="block" id="stack" aria-labelledby="stack-title">
+        <section class="block reveal" id="stack" aria-labelledby="stack-title">
           <div class="block-head">
             <h2 id="stack-title">技术</h2>
-            <span class="block-index">03</span>
+            <span class="block-index">叁</span>
           </div>
 
-          <div class="stack-layout">
-            <div class="stack-notes">
-              <article class="stack-note">
-                <span class="stack-index-number">01</span>
-                <h3>脑机接口</h3>
-                <p>PsychoPy、PyQt6、CCA / FBCCA、NumPy、SciPy，以及刺激事件和 EEG 采集的对接。</p>
-              </article>
-              <article class="stack-note">
-                <span class="stack-index-number">02</span>
-                <h3>桌面与本地工具</h3>
-                <p>PySide6、Electron、Tauri、Node.js、本地 HTTP 服务、文件存储与文档导出。</p>
-              </article>
-              <article class="stack-note">
-                <span class="stack-index-number">03</span>
-                <h3>计算机视觉</h3>
-                <p>Ultralytics YOLO、摄像头和网络流输入、低延迟最新帧处理与模型格式导出。</p>
-              </article>
-            </div>
+          <div class="stack-notes">
+            <article class="stack-note">
+              <span class="stack-index-number">其一</span>
+              <h3>脑机接口</h3>
+              <p>PsychoPy、PyQt6、CCA / FBCCA、NumPy、SciPy，以及刺激事件和 EEG 采集的对接。</p>
+            </article>
+            <article class="stack-note">
+              <span class="stack-index-number">其二</span>
+              <h3>桌面与本地工具</h3>
+              <p>PySide6、Electron、Tauri、Node.js、本地 HTTP 服务、文件存储与文档导出。</p>
+            </article>
+            <article class="stack-note">
+              <span class="stack-index-number">其三</span>
+              <h3>计算机视觉</h3>
+              <p>Ultralytics YOLO、摄像头和网络流输入、低延迟最新帧处理与模型格式导出。</p>
+            </article>
           </div>
         </section>
 
-        <section class="block" id="contact" aria-labelledby="contact-title">
+        <section class="block reveal" id="contact" aria-labelledby="contact-title">
           <div class="block-head">
             <h2 id="contact-title">联系</h2>
-            <span class="block-index">04</span>
+            <span class="block-index">肆</span>
           </div>
 
           <div class="contact-layout">
             <p>项目问题优先在对应仓库开 Issue，这样讨论会留在项目里。其他事情发邮件就行。</p>
             <div class="contact-list">
               <a href="mailto:laya_download@163.com">
-                <span>Email 01</span>
+                <span>邮箱 · 一</span>
                 <strong>laya_download@163.com</strong>
               </a>
               <a href="mailto:layabubing@gmail.com">
-                <span>Email 02</span>
+                <span>邮箱 · 二</span>
                 <strong>layabubing@gmail.com</strong>
               </a>
               <a href="https://github.com/layabubing" target="_blank" rel="noreferrer">
-                <span>Profile</span>
+                <span>主页</span>
                 <strong>github.com/layabubing</strong>
               </a>
             </div>
