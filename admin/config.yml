@@ -3,6 +3,9 @@ backend:
   repo: layabubing/layabubing.github.io
   branch: main
 
+media_folder: assets
+public_folder: /assets
+
 site_url: https://layabubing.github.io
 locale: zh-Hans
 
