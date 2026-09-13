@@ -239,6 +239,26 @@ h1 {
   color: var(--accent);
 }
 
+/* ---------- 子页页头 ---------- */
+
+.page-head {
+  width: min(var(--maxw), calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(72px, 11vh, 120px) 0 clamp(48px, 7vh, 72px);
+}
+
+.page-title {
+  margin-bottom: 18px;
+  font-size: clamp(2.6rem, 6.5vw, 4.2rem);
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.page-head .lead {
+  margin-bottom: 0;
+}
+
 /* ---------- 正文纸面 ---------- */
 
 .paper {
@@ -281,6 +301,22 @@ h2 {
   color: var(--faint);
   font-size: 0.95rem;
   letter-spacing: 0.2em;
+}
+
+.block-more {
+  margin: 26px 0 0;
+  text-align: right;
+}
+
+.block-intro {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 /* ---------- 关于 ---------- */
@@ -457,46 +493,19 @@ h3 {
   border-color: var(--accent);
 }
 
-/* ---------- 组织项目与归档 ---------- */
-
-.org-projects {
-  margin-top: 40px;
-  padding-top: 34px;
-  border-top: 1px solid var(--line);
-}
-
-.org-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-bottom: 8px;
-}
-
-.org-projects .eyebrow {
-  margin-bottom: 10px;
-}
-
-.org-head h3 {
-  font-size: 1.15rem;
-}
+/* ---------- 归档 ---------- */
 
 .archive {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 32px;
-  margin-top: 36px;
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
+  align-items: start;
 }
 
-.archive .eyebrow {
-  margin-bottom: 10px;
-}
-
-.archive h3 {
-  font-size: 1.05rem;
+.archive-note {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .archive-links {
@@ -571,20 +580,6 @@ h3 {
 }
 
 /* ---------- 联系 ---------- */
-
-.contact-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
-  gap: 48px;
-  align-items: start;
-}
-
-.contact-layout > p {
-  max-width: 32ch;
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 0.96rem;
-}
 
 .contact-list {
   border-top: 1px solid var(--line);
@@ -676,8 +671,7 @@ h3 {
     display: none;
   }
 
-  .about-layout,
-  .contact-layout {
+  .about-layout {
     grid-template-columns: 1fr;
     gap: 32px;
   }
@@ -686,7 +680,7 @@ h3 {
     grid-template-columns: 60px minmax(0, 1fr);
   }
 
-  .row-link {
+  .project-row .row-link {
     grid-column: 2;
     align-self: start;
     margin-top: -6px;
@@ -707,6 +701,11 @@ h3 {
   .hero {
     width: calc(100% - 32px);
     padding: 72px 0 56px;
+  }
+
+  .page-head {
+    width: calc(100% - 32px);
+    padding: 56px 0 40px;
   }
 
   .paper {
@@ -768,7 +767,7 @@ h3 {
     justify-content: space-between;
   }
 
-  .row-link {
+  .project-row .row-link {
     grid-column: auto;
     margin-top: 0;
   }
