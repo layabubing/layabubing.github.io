@@ -1,0 +1,72 @@
+backend:
+  name: github
+  repo: layabubing/layabubing.github.io
+  branch: main
+
+site_url: https://layabubing.github.io
+locale: zh-Hans
+
+collections:
+  - name: projects
+    label: 项目列表
+    files:
+      - name: projects
+        label: 项目数据
+        file: data/projects.json
+        fields:
+          - name: personal
+            label: 个人项目
+            widget: list
+            fields:
+              - { name: title, label: 名称, widget: string }
+              - { name: tag, label: 分类标签, widget: string }
+              - { name: status, label: 状态文字, widget: string }
+              - name: statusType
+                label: 状态样式
+                widget: select
+                options:
+                  - { label: 最近在做（绿）, value: active }
+                  - { label: 进行中（黄）, value: wip }
+                  - { label: 普通（灰）, value: plain }
+              - { name: desc, label: 简介, widget: text }
+              - { name: tags, label: 技术标签, widget: list, field: { label: 标签, name: tag, widget: string } }
+              - { name: url, label: 仓库地址, widget: string }
+              - { name: featured, label: 重点卡片样式, widget: boolean, default: false }
+              - { name: homeFeatured, label: 在首页展示, widget: boolean, default: false }
+          - name: org
+            label: 组织项目
+            widget: list
+            fields:
+              - { name: title, label: 名称, widget: string }
+              - { name: tag, label: 分类标签, widget: string }
+              - { name: status, label: 状态文字, widget: string }
+              - name: statusType
+                label: 状态样式
+                widget: select
+                options:
+                  - { label: 最近在做（绿）, value: active }
+                  - { label: 进行中（黄）, value: wip }
+                  - { label: 普通（灰）, value: plain }
+              - { name: desc, label: 简介, widget: text }
+              - { name: tags, label: 技术标签, widget: list, field: { label: 标签, name: tag, widget: string } }
+              - { name: url, label: 仓库地址, widget: string }
+          - name: archive
+            label: 归档项目
+            widget: list
+            fields:
+              - { name: title, label: 名称, widget: string }
+              - { name: note, label: 说明, widget: string }
+              - { name: url, label: 仓库地址, widget: string }
+
+  - name: posts
+    label: 随笔
+    folder: posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    fields:
+      - { name: title, label: 标题, widget: string }
+      - { name: date, label: 日期, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { name: excerpt, label: 摘要, widget: text, required: false }
+      - { name: tags, label: 标签, widget: list, required: false, field: { label: 标签, name: tag, widget: string } }
+      - { name: body, label: 正文, widget: markdown }

@@ -28,6 +28,7 @@
         <a href="index.html" aria-current="true">首页</a>
         <a href="about.html">关于</a>
         <a href="projects.html">项目</a>
+        <a href="blog.html">随笔</a>
         <a href="contact.html">联系</a>
       </nav>
       <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
@@ -77,43 +78,7 @@
             <span class="block-index">贰</span>
           </div>
 
-          <div class="project-list">
-            <article class="project-row">
-              <div class="row-meta">
-                <span class="row-index">01</span>
-                <span class="row-tag">BCI</span>
-              </div>
-              <div class="row-body">
-                <div class="row-title-line">
-                  <h3>SSVEP-Studio</h3>
-                  <span class="status status-active">最近在做</span>
-                </div>
-                <p>
-                  SSVEP 刺激设计器。PyQt6 负责参数和布局，PsychoPy 在独立进程里做 VBL 同步的逐帧呈现，
-                  顺带记录帧间隔、掉帧和实验事件。
-                </p>
-              </div>
-              <a class="row-link" href="https://github.com/layabubing/SSVEP-Studio" target="_blank" rel="noreferrer">打开仓库</a>
-            </article>
-
-            <article class="project-row">
-              <div class="row-meta">
-                <span class="row-index">02</span>
-                <span class="row-tag">CV</span>
-              </div>
-              <div class="row-body">
-                <div class="row-title-line">
-                  <h3>YOLO26n-Studio</h3>
-                  <span class="status status-active">最近在做</span>
-                </div>
-                <p>
-                  一个能直接跑的目标检测项目。支持图片、视频、摄像头和网络流，GUI 显示 FPS、延迟、
-                  类别和目标数量，也可以拿自己的权重来做验证或导出。
-                </p>
-              </div>
-              <a class="row-link" href="https://github.com/layabubing/YOLO26n-Studio" target="_blank" rel="noreferrer">打开仓库</a>
-            </article>
-          </div>
+          <div class="project-list" id="home-featured"></div>
 
           <p class="block-more"><a class="row-link" href="projects.html">全部项目</a></p>
         </section>
@@ -127,5 +92,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/projects.js"></script>
   </body>
 </html>

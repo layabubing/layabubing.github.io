@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Downloading / layabubing 的随笔。">
+    <meta name="theme-color" content="#f7f5ef">
+    <title>随笔 · Downloading / layabubing</title>
+    <link rel="icon" href="assets/avatar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="回到首页">
+        <img src="assets/avatar.png" width="28" height="28" alt="">
+        <span>layabubing</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于</a>
+        <a href="projects.html">项目</a>
+        <a href="blog.html" aria-current="true">随笔</a>
+        <a href="contact.html">联系</a>
+      </nav>
+      <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
+    </header>
+
+    <main>
+      <article class="post-article" id="post-article">
+        <header class="post-header" id="post-header"></header>
+        <div class="post-body" id="post-body">
+          <p class="data-loading">正在加载……</p>
+        </div>
+        <p class="post-back"><a class="row-link" href="blog.html">返回随笔列表</a></p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>Downloading / layabubing</span>
+      <span>Hosted on GitHub Pages</span>
+      <a href="#top">回到顶部</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+    <script src="script.js"></script>
+    <script src="js/post.js"></script>
+  </body>
+</html>
