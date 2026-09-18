@@ -6,7 +6,11 @@
       "status": "最近在做",
       "statusType": "active",
       "desc": "SSVEP 刺激设计器。PyQt6 负责参数和布局，PsychoPy 在独立进程里做 VBL 同步的逐帧呈现，顺带记录帧间隔、掉帧和实验事件。",
-      "tags": ["PyQt6", "PsychoPy", "JSONL / UDP"],
+      "tags": [
+        "PyQt6",
+        "PsychoPy",
+        "JSONL / UDP"
+      ],
       "url": "https://github.com/layabubing/SSVEP-Studio",
       "featured": true,
       "homeFeatured": true
@@ -17,7 +21,11 @@
       "status": "最近在做",
       "statusType": "active",
       "desc": "无训练实时识别。提供 CCA、FBCCA、流式滑窗和异步状态机，只有候选频率同时通过分数、裕量和驻留条件时，才输出一次命令。",
-      "tags": ["NumPy", "SciPy", "Python 3.10+"],
+      "tags": [
+        "NumPy",
+        "SciPy",
+        "Python 3.10+"
+      ],
       "url": "https://github.com/layabubing/Asynchronous-SSVEP-BCI-SDK",
       "featured": false,
       "homeFeatured": false
@@ -25,10 +33,14 @@
     {
       "title": "YOLO26n-Studio",
       "tag": "CV",
-      "status": "最近在做",
-      "statusType": "active",
+      "status": "稳定",
+      "statusType": "plain",
       "desc": "一个能直接跑的目标检测项目。支持图片、视频、摄像头和网络流，GUI 显示 FPS、延迟、类别和目标数量，也可以拿自己的权重来做验证或导出。",
-      "tags": ["PySide6", "Ultralytics", "Streaming"],
+      "tags": [
+        "PySide6",
+        "Ultralytics",
+        "Streaming"
+      ],
       "url": "https://github.com/layabubing/YOLO26n-Studio",
       "featured": false,
       "homeFeatured": true
@@ -36,10 +48,14 @@
     {
       "title": "APIKeyMemory",
       "tag": "DESKTOP",
-      "status": "最近在做",
-      "statusType": "active",
+      "status": "稳定",
+      "statusType": "plain",
       "desc": "本地加密的 API Key 管理器。Tauri + React 搭界面，Node 核心只在本机运行；支持加密备份、导入导出和轮换提醒，密钥不会明文落盘。",
-      "tags": ["Tauri", "React", "Node.js"],
+      "tags": [
+        "Tauri",
+        "React",
+        "Node.js"
+      ],
       "url": "https://github.com/layabubing/APIKeyMemory",
       "featured": false,
       "homeFeatured": false
@@ -50,7 +66,11 @@
       "status": "工具",
       "statusType": "plain",
       "desc": "歌词搜索和整理工具。用 iTunes Search API 搜元数据，再从 LRCLIB 抓歌词，最后按自定义顺序导出成 Markdown、Word 或 PDF。",
-      "tags": ["Electron", "Node.js", "PDFKit"],
+      "tags": [
+        "Electron",
+        "Node.js",
+        "PDFKit"
+      ],
       "url": "https://github.com/layabubing/LyricBookGenerator",
       "featured": false,
       "homeFeatured": false
@@ -61,7 +81,11 @@
       "status": "进行中",
       "statusType": "wip",
       "desc": "本地专注工具。有计时、番茄钟、任务、统计和网站屏蔽；Python 起一个轻量 HTTP 服务，Vue 界面和数据都保存在本机。",
-      "tags": ["Python", "Vue", "Local-first"],
+      "tags": [
+        "Python",
+        "Vue",
+        "Local-first"
+      ],
       "url": "https://github.com/layabubing/Concentrate-On",
       "featured": false,
       "homeFeatured": false
@@ -72,7 +96,11 @@
       "status": "实验",
       "statusType": "plain",
       "desc": "小号 Transformer 文本生成实验。纯 Python 实现的 mini GPT，模型基于 Transformer 架构，按输入文本逐词预测，训练语料由 ChatGPT 生成。",
-      "tags": ["Python", "Transformer", "文本生成"],
+      "tags": [
+        "Python",
+        "Transformer",
+        "文本生成"
+      ],
       "url": "https://github.com/layabubing/HaGPT",
       "featured": false,
       "homeFeatured": false
@@ -85,7 +113,11 @@
       "status": "组织官网",
       "statusType": "active",
       "desc": "Phasor 的 AI 工作室官方网站。零依赖单文件构建，CSS、JS 与图片全部内联进一个 HTML，深色/浅色双主题，可直接部署到 Cloudflare Pages。",
-      "tags": ["HTML / CSS / JS", "零依赖构建", "Cloudflare"],
+      "tags": [
+        "HTML / CSS / JS",
+        "零依赖构建",
+        "Cloudflare"
+      ],
       "url": "https://github.com/PhasorTeam/PhasorTeamWebsite"
     },
     {
@@ -94,7 +126,11 @@
       "status": "组织项目",
       "statusType": "active",
       "desc": "FlowAI 桌面 AI 工作流设计器。把文本、视觉、语音、图像模型和工具节点拖入画布、连线成完整工作流，按拓扑顺序执行并逐节点输出日志，数据全部留在本地；源码可见（自定义专有许可）。",
-      "tags": ["Electron", "React + TypeScript", "React Flow"],
+      "tags": [
+        "Electron",
+        "React + TypeScript",
+        "React Flow"
+      ],
       "url": "https://github.com/PhasorTeam/AIWorkflowDesigner"
     }
   ],
