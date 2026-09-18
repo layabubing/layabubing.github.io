@@ -4,16 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Downloading / layabubing 的随笔。">
-    <meta name="theme-color" content="#f7f5ef">
+    <meta name="theme-color" content="#f4f1ea">
     <title>随笔 · Downloading / layabubing</title>
     <link rel="icon" href="assets/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
+    <style>
+      /* 正文靠 JS 注入，首次绘制前先隐藏，避免旧样式一闪而过 */
+      #post-header:empty,
+      #post-body:has(> .data-loading) {
+        visibility: hidden;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header" id="top">

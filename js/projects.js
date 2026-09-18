@@ -1,25 +1,25 @@
 const statusClass = (type) =>
   type === "active" ? "status status-active" : type === "wip" ? "status status-wip" : "status";
 
-const projectRow = (item, index, { withTags = true } = {}) => `
-  <article class="project-row${item.featured ? " project-row-featured" : ""}">
-    <div class="row-meta">
-      <span class="row-index">${String(index + 1).padStart(2, "0")}</span>
-      <span class="row-tag">${item.tag}</span>
+const projectCard = (item, index, { withTags = true } = {}) => `
+  <article class="project${item.featured ? " project-featured" : ""}">
+    <div class="project-top">
+      <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
+      <span class="project-tag">${item.tag}</span>
     </div>
-    <div class="row-body">
-      <div class="row-title-line">
-        <h3>${item.title}</h3>
-        <span class="${statusClass(item.statusType)}">${item.status}</span>
-      </div>
-      <p>${item.desc}</p>
+    <div class="project-head">
+      <h3>${item.title}</h3>
+      <span class="${statusClass(item.statusType)}">${item.status}</span>
+    </div>
+    <p class="project-desc">${item.desc}</p>
+    <div class="project-foot">
       ${
         withTags && item.tags?.length
           ? `<ul class="tag-row" aria-label="技术标签">${item.tags.map((t) => `<li>${t}</li>`).join("")}</ul>`
-          : ""
+          : "<span></span>"
       }
+      <a class="row-link" href="${item.url}" target="_blank" rel="noreferrer">仓库</a>
     </div>
-    <a class="row-link" href="${item.url}" target="_blank" rel="noreferrer">打开仓库</a>
   </article>`;
 
 const archiveLink = (item) => `
@@ -39,8 +39,8 @@ const renderProjectsPage = (data) => {
   const org = document.querySelector("#org-list");
   const archive = document.querySelector("#archive-list");
 
-  if (personal) personal.innerHTML = data.personal.map((p, i) => projectRow(p, i)).join("");
-  if (org) org.innerHTML = data.org.map((p, i) => projectRow(p, i)).join("");
+  if (personal) personal.innerHTML = data.personal.map((p, i) => projectCard(p, i)).join("");
+  if (org) org.innerHTML = data.org.map((p, i) => projectCard(p, i)).join("");
   if (archive) archive.innerHTML = data.archive.map(archiveLink).join("");
 };
 
@@ -50,7 +50,7 @@ const renderHomeFeatured = (data) => {
 
   const featured = data.personal.filter((p) => p.homeFeatured).slice(0, 2);
   mount.innerHTML = featured
-    .map((p, i) => projectRow({ ...p, featured: false }, i, { withTags: false }))
+    .map((p, i) => projectCard({ ...p, featured: false }, i, { withTags: false }))
     .join("");
 };
 
