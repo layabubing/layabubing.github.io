@@ -7,7 +7,7 @@
       name="description"
       content="Downloading的个人主页。主要写 Python，方向包括 SSVEP 脑机接口、计算机视觉，也会做自己用得上的桌面工具。"
     >
-    <meta name="theme-color" content="#f4f1ea">
+    <meta name="theme-color" content="#0a0d0c">
     <title>Downloading / layabubing</title>
     <link rel="icon" href="assets/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
     >
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body class="home-page">
     <header class="site-header" id="top">
       <a class="brand" href="index.html" aria-label="回到首页">
         <img src="assets/avatar.png" width="28" height="28" alt="">
@@ -36,16 +36,26 @@
 
     <main>
       <section class="hero reveal" aria-labelledby="hero-title">
-        <p class="eyebrow">个人主页 · Personal Site</p>
-        <h1 id="hero-title">Downloading</h1>
-        <p class="role">Python · 脑机接口 · 计算机视觉 · 桌面工具</p>
-        <p class="lead">
-          最近在写 SSVEP 刺激呈现、异步识别和目标检测，也会做一些自己真正会用的桌面软件。
-          代码都放在 GitHub。
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="projects.html">看看项目</a>
-          <a class="button button-quiet" href="contact.html">联系方式</a>
+        <div class="hero-copy">
+          <p class="eyebrow">个人主页 · Personal Site</p>
+          <h1 id="hero-title"><span>Down</span><span>loading</span></h1>
+          <p class="role">Python · 脑机接口 · 计算机视觉 · 桌面工具</p>
+          <p class="lead">
+            最近在写 SSVEP 刺激呈现、异步识别和目标检测，也会做一些自己真正会用的桌面软件。
+            代码都放在 GitHub。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="projects.html">看看项目</a>
+            <a class="button button-quiet" href="contact.html">联系方式</a>
+          </div>
+        </div>
+        <div class="signal-art" aria-hidden="true">
+          <div class="signal-orbit signal-orbit-outer"></div>
+          <div class="signal-orbit signal-orbit-inner"></div>
+          <img src="assets/avatar.png" width="192" height="192" alt="">
+          <span class="signal-label signal-label-top">STATUS / ACTIVE</span>
+          <span class="signal-label signal-label-side">BCI · CV · TOOLS</span>
+          <span class="signal-coordinate">SYSTEM / ONLINE<br>SIGNAL / READY</span>
         </div>
       </section>
 
