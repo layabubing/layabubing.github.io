@@ -3,105 +3,81 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Downloading的个人主页。主要写 Python，方向包括 SSVEP 脑机接口、计算机视觉，也会做自己用得上的桌面工具。"
-    >
-    <meta name="theme-color" content="#0a0d0c">
+    <meta name="description" content="Downloading 的个人主页。主要写 Python，关注 SSVEP 脑机接口、计算机视觉和桌面工具。">
+    <meta name="theme-color" content="#f7f6f2">
     <title>Downloading / layabubing</title>
     <link rel="icon" href="assets/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20261016">
   </head>
   <body class="home-page">
+    <a class="skip-link" href="#main">跳转到正文</a>
     <header class="site-header" id="top">
       <a class="brand" href="index.html" aria-label="回到首页">
         <img src="assets/avatar.png" width="28" height="28" alt="">
         <span>layabubing</span>
       </a>
       <nav class="site-nav" aria-label="主导航">
-        <a href="index.html" aria-current="true">首页</a>
+        <a href="index.html" aria-current="page">首页</a>
         <a href="about.html">关于</a>
         <a href="projects.html">项目</a>
         <a href="blog.html">随笔</a>
         <a href="contact.html">联系</a>
       </nav>
-      <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
     </header>
 
-    <main>
-      <section class="hero reveal" aria-labelledby="hero-title">
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">个人主页 · Personal Site</p>
-          <h1 id="hero-title"><span>Down</span><span>loading</span></h1>
-          <p class="role">Python · 脑机接口 · 计算机视觉 · 桌面工具</p>
-          <p class="lead">
-            最近在写 SSVEP 刺激呈现、异步识别和目标检测，也会做一些自己真正会用的桌面软件。
-            代码都放在 GitHub。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="projects.html">看看项目</a>
-            <a class="button button-quiet" href="contact.html">联系方式</a>
+          <p class="eyebrow">layabubing 的个人主页</p>
+          <h1 id="hero-title">Downloading<span class="title-period">.</span></h1>
+          <p class="lead">写代码，做实验，<br>也做自己用得上的工具。</p>
+          <p class="hero-note">主要使用 Python，关注脑机接口与计算机视觉。<br>这里记录正在做的项目，以及写代码之外的想法。</p>
+          <a class="row-link" href="projects.html">浏览项目 <span aria-hidden="true">→</span></a>
+        </div>
+        <aside class="profile-note" aria-label="个人资料">
+          <div class="signal-art" aria-hidden="true">
+            <div class="signal-orbit signal-orbit-outer"></div>
+            <div class="signal-orbit signal-orbit-inner"></div>
+            <img src="assets/avatar.png" width="112" height="112" alt="">
           </div>
-        </div>
-        <div class="signal-art" aria-hidden="true">
-          <div class="signal-orbit signal-orbit-outer"></div>
-          <div class="signal-orbit signal-orbit-inner"></div>
-          <img src="assets/avatar.png" width="192" height="192" alt="">
-          <span class="signal-label signal-label-top">STATUS / ACTIVE</span>
-          <span class="signal-label signal-label-side">BCI · CV · TOOLS</span>
-          <span class="signal-coordinate">SYSTEM / ONLINE<br>SIGNAL / READY</span>
-        </div>
+          <p class="profile-name">Downloading</p>
+          <p class="profile-handle">@layabubing</p>
+          <p class="profile-caption">从一个问题开始，<br>慢慢写成一个项目。</p>
+          <a href="about.html">更多关于我 <span aria-hidden="true">↗</span></a>
+        </aside>
       </section>
 
       <div class="paper">
-        <section class="block reveal" aria-labelledby="intro-title">
+        <section class="block home-projects" aria-labelledby="featured-title">
           <div class="block-head">
-            <h2 id="intro-title">关于我</h2>
-            <span class="block-index">壹</span>
+            <div><p class="section-kicker">Selected projects</p><h2 id="featured-title">最近的项目</h2></div>
+            <a class="row-link" href="projects.html">全部项目 <span aria-hidden="true">→</span></a>
           </div>
-
-          <div class="about-layout">
-            <p class="about-copy">
-              我是 Downloading，GitHub 上叫 layabubing。主要用 Python，方向偏脑机接口和计算机视觉，
-              也写一些只在本地跑的桌面工具。项目通常是先解决自己遇到的问题，再整理成仓库。
-            </p>
-            <dl class="mini-stats" aria-label="GitHub 资料概览">
-              <div><dt>公开仓库</dt><dd>10</dd></div>
-              <div><dt>加入 GitHub</dt><dd>2022</dd></div>
-              <div><dt>主要语言</dt><dd>Python</dd></div>
-              <div><dt>项目文档</dt><dd>中 / 英</dd></div>
-            </dl>
-          </div>
-
-          <p class="block-more"><a class="row-link" href="about.html">更多关于我</a></p>
+          <div class="project-list" id="home-featured"></div>
         </section>
 
-        <section class="block reveal" aria-labelledby="featured-title">
-          <div class="block-head">
-            <h2 id="featured-title">在做的项目</h2>
-            <span class="block-index">贰</span>
+        <section class="block home-notes" aria-labelledby="notes-title">
+          <div>
+            <p class="section-kicker">Notes & thoughts</p>
+            <h2 id="notes-title">代码之外</h2>
           </div>
-
-          <div class="project-list" id="home-featured"></div>
-
-          <p class="block-more"><a class="row-link" href="projects.html">全部项目</a></p>
+          <div>
+            <p>一些想法、踩坑记录和读书笔记，留在随笔里。</p>
+            <a class="row-link" href="blog.html">读读随笔 <span aria-hidden="true">→</span></a>
+          </div>
         </section>
       </div>
     </main>
 
     <footer class="site-footer">
-      <span>Downloading / layabubing</span>
+      <span>Downloading <span class="footer-separator">/</span> layabubing</span>
       <span>Hosted on GitHub Pages</span>
-      <a href="#top">回到顶部</a>
+      <a href="#top">回到顶部 ↑</a>
     </footer>
-
-    <script src="script.js"></script>
-    <script src="js/projects.js"></script>
+    <script src="js/projects.js?v=20261016"></script>
   </body>
 </html>

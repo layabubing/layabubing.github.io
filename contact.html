@@ -7,7 +7,7 @@
       name="description"
       content="联系 Downloading / layabubing：项目问题优先在对应仓库开 Issue，其他事情发邮件。"
     >
-    <meta name="theme-color" content="#0a0d0c">
+    <meta name="theme-color" content="#f7f6f2">
     <title>联系 · Downloading / layabubing</title>
     <link rel="icon" href="assets/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261016">
   </head>
   <body>
+    <a class="skip-link" href="#main">跳转到正文</a>
     <header class="site-header" id="top">
       <a class="brand" href="index.html" aria-label="回到首页">
         <img src="assets/avatar.png" width="28" height="28" alt="">
@@ -29,20 +30,20 @@
         <a href="about.html">关于</a>
         <a href="projects.html">项目</a>
         <a href="blog.html">随笔</a>
-        <a href="contact.html" aria-current="true">联系</a>
+        <a href="contact.html" aria-current="page">联系</a>
       </nav>
       <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
     </header>
 
-    <main>
-      <div class="page-head reveal">
+    <main id="main">
+      <div class="page-head">
         <p class="eyebrow">Contact · 联系</p>
         <h1 class="page-title">联系</h1>
         <p class="lead">项目问题优先在对应仓库开 Issue，这样讨论会留在项目里。其他事情发邮件就行。</p>
       </div>
 
       <div class="paper">
-        <section class="block reveal" aria-labelledby="contact-title">
+        <section class="block" aria-labelledby="contact-title">
           <div class="block-head">
             <h2 id="contact-title">联系方式</h2>
             <span class="block-index">壹</span>
@@ -76,6 +77,5 @@
       <a href="#top">回到顶部</a>
     </footer>
 
-    <script src="script.js"></script>
   </body>
 </html>

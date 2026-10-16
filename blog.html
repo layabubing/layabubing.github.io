@@ -7,7 +7,7 @@
       name="description"
       content="Downloading / layabubing 的随笔：写代码之外的想法、踩坑记录和读书笔记。"
     >
-    <meta name="theme-color" content="#0a0d0c">
+    <meta name="theme-color" content="#f7f6f2">
     <title>随笔 · Downloading / layabubing</title>
     <link rel="icon" href="assets/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261016">
   </head>
   <body>
+    <a class="skip-link" href="#main">跳转到正文</a>
     <header class="site-header" id="top">
       <a class="brand" href="index.html" aria-label="回到首页">
         <img src="assets/avatar.png" width="28" height="28" alt="">
@@ -28,21 +29,21 @@
         <a href="index.html">首页</a>
         <a href="about.html">关于</a>
         <a href="projects.html">项目</a>
-        <a href="blog.html" aria-current="true">随笔</a>
+        <a href="blog.html" aria-current="page">随笔</a>
         <a href="contact.html">联系</a>
       </nav>
       <a class="header-link" href="https://github.com/layabubing" target="_blank" rel="noreferrer">GitHub</a>
     </header>
 
-    <main>
-      <div class="page-head reveal">
+    <main id="main">
+      <div class="page-head">
         <p class="eyebrow">Notes · 随笔</p>
         <h1 class="page-title">随笔</h1>
         <p class="lead">写代码之外的想法、踩坑记录和读书笔记。</p>
       </div>
 
       <div class="paper">
-        <section class="block reveal" aria-label="随笔列表">
+        <section class="block" aria-label="随笔列表">
           <div class="post-list" id="post-list">
             <p class="data-loading">正在加载随笔列表……</p>
           </div>
@@ -56,7 +57,6 @@
       <a href="#top">回到顶部</a>
     </footer>
 
-    <script src="script.js"></script>
     <script src="js/blog.js"></script>
   </body>
 </html>
