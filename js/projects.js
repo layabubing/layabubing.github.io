@@ -2,13 +2,13 @@ const statusClass = (type) =>
   type === "active" ? "status status-active" : type === "wip" ? "status status-wip" : "status";
 
 const projectCard = (item, index, { withTags = true } = {}) => `
-  <article class="project${item.featured ? " project-featured" : ""}">
+  <article class="project">
     <div class="project-top">
       <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
       <span class="project-tag">${item.tag}</span>
     </div>
     <div class="project-head">
-      <h3>${item.title}</h3>
+      <h3><a href="${item.url}" target="_blank" rel="noreferrer">${item.title}</a></h3>
       <span class="${statusClass(item.statusType)}">${item.status}</span>
     </div>
     <p class="project-desc">${item.desc}</p>
@@ -18,7 +18,7 @@ const projectCard = (item, index, { withTags = true } = {}) => `
           ? `<ul class="tag-row" aria-label="技术标签">${item.tags.map((t) => `<li>${t}</li>`).join("")}</ul>`
           : "<span></span>"
       }
-      <a class="row-link" href="${item.url}" target="_blank" rel="noreferrer">仓库</a>
+      <a class="row-link" href="${item.url}" target="_blank" rel="noreferrer" aria-label="查看 ${item.title} 的仓库">查看仓库 <span aria-hidden="true">↗</span></a>
     </div>
   </article>`;
 
@@ -50,7 +50,7 @@ const renderHomeFeatured = (data) => {
 
   const featured = data.personal.filter((p) => p.homeFeatured).slice(0, 2);
   mount.innerHTML = featured
-    .map((p, i) => projectCard({ ...p, featured: false }, i, { withTags: false }))
+    .map((p, i) => projectCard(p, i, { withTags: false }))
     .join("");
 };
 
