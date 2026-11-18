@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20261118b">
+    <link rel="stylesheet" href="styles.css?v=20261118c">
   </head>
   <body class="home-page">
     <a class="skip-link" href="#main">跳转到正文</a>
@@ -40,8 +40,13 @@
         </div>
         <aside class="turntable" aria-label="个人资料与互动唱机">
           <div class="plinth">
-            <div class="record" aria-hidden="true">
-              <img src="assets/avatar.png" width="112" height="112" alt="" draggable="false">
+            <div class="record" role="img" aria-label="头像黑胶唱片，贴有 Python、NumPy 和 PyQt6 贴纸">
+              <div class="record-labels" aria-hidden="true">
+                <img src="assets/avatar.png" width="112" height="112" alt="" draggable="false">
+                <span class="sticker sticker-python">Python</span>
+                <span class="sticker sticker-numpy">NumPy</span>
+                <span class="sticker sticker-qt">PyQt6</span>
+              </div>
             </div>
             <div class="tonearm" aria-hidden="true"></div>
             <span class="scratch-hint">拖动唱片 ↶</span>
@@ -82,6 +87,6 @@
       <a href="#top">回到顶部 ↑</a>
     </footer>
     <script src="js/projects.js?v=20261016"></script>
-    <script src="js/turntable.js?v=20261118"></script>
+    <script src="js/turntable.js?v=20261118c"></script>
   </body>
 </html>

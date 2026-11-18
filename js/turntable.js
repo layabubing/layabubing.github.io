@@ -3,6 +3,7 @@ const record = deck.querySelector(".record");
 const spinSwitch = deck.querySelector(".spin-switch");
 const speed = deck.querySelector("input");
 const readout = deck.querySelector("output");
+const turnsPerSide = 16;
 let rotation = 0;
 let playing = false;
 let drag = null;
@@ -10,8 +11,16 @@ let frame = null;
 let previousTime = null;
 
 function draw() {
-  rotation %= 360;
-  record.style.setProperty("--rotation", rotation + "deg");
+  const sideDegrees = turnsPerSide * 360;
+  rotation = (rotation % sideDegrees + sideDegrees) % sideDegrees;
+  record.style.setProperty("--rotation", rotation % 360 + "deg");
+
+  // 前十五圈向内循迹，最后一圈平滑返回外缘。
+  const turns = rotation / 360;
+  const returnTurn = turns - (turnsPerSide - 1);
+  const groove = returnTurn < 0 ? turns / (turnsPerSide - 1) : (1 + Math.cos(Math.PI * returnTurn)) / 2;
+  const sway = 0.75 * Math.sin(rotation * Math.PI / 180);
+  deck.style.setProperty("--needle-angle", 37 + 19 * groove + sway + "deg");
 }
 
 function advance(time) {
@@ -22,6 +31,7 @@ function advance(time) {
 }
 
 function updatePlayback() {
+  deck.classList.toggle("tracking", playing || drag !== null);
   cancelAnimationFrame(frame);
   previousTime = null;
   if (playing && drag === null && !document.hidden) frame = requestAnimationFrame(advance);
@@ -30,7 +40,6 @@ function updatePlayback() {
 spinSwitch.addEventListener("click", () => {
   playing = !playing;
   spinSwitch.setAttribute("aria-pressed", String(playing));
-  deck.classList.toggle("playing", playing);
   updatePlayback();
 });
 
@@ -44,9 +53,9 @@ function pointerAngle(event) {
 
 record.addEventListener("pointerdown", event => {
   if (drag || event.button !== 0) return;
-  const bounds = record.parentElement.getBoundingClientRect();
-  const centerX = bounds.left + record.offsetLeft + record.offsetWidth / 2;
-  const centerY = bounds.top + record.offsetTop + record.offsetHeight / 2;
+  const bounds = record.getBoundingClientRect();
+  const centerX = bounds.left + bounds.width / 2;
+  const centerY = bounds.top + bounds.height / 2;
   drag = { id: event.pointerId, x: centerX, y: centerY };
   drag.angle = pointerAngle(event);
   record.setPointerCapture(event.pointerId);
@@ -56,7 +65,7 @@ record.addEventListener("pointerdown", event => {
 record.addEventListener("pointermove", event => {
   if (drag?.id !== event.pointerId) return;
   const nextAngle = pointerAngle(event);
-  rotation += nextAngle - drag.angle;
+  rotation += ((nextAngle - drag.angle + 540) % 360) - 180;
   drag.angle = nextAngle;
   draw();
 });
