@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Downloading 的个人主页。主要写 Python，关注 SSVEP 脑机接口、计算机视觉和桌面工具。">
-    <meta name="theme-color" content="#f7f6f2">
+    <meta name="theme-color" content="#f6f3e9">
     <title>Downloading / layabubing</title>
     <link rel="icon" href="assets/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20261118">
+    <link rel="stylesheet" href="styles.css?v=20261118b">
   </head>
   <body class="home-page">
     <a class="skip-link" href="#main">跳转到正文</a>
@@ -38,16 +38,19 @@
           <p class="hero-note">主要使用 Python，关注脑机接口与计算机视觉。<br>这里记录正在做的项目，以及写代码之外的想法。</p>
           <a class="row-link" href="projects.html">浏览项目 <span aria-hidden="true">→</span></a>
         </div>
-        <aside class="profile-note" aria-label="个人资料">
-          <div class="signal-art" aria-hidden="true">
-            <div class="signal-orbit signal-orbit-outer"></div>
-            <div class="signal-orbit signal-orbit-inner"></div>
-            <img src="assets/avatar.png" width="112" height="112" alt="">
+        <aside class="turntable" aria-label="个人资料与互动唱机">
+          <div class="plinth">
+            <div class="record" aria-hidden="true">
+              <img src="assets/avatar.png" width="112" height="112" alt="" draggable="false">
+            </div>
+            <div class="tonearm" aria-hidden="true"></div>
+            <span class="scratch-hint">拖动唱片 ↶</span>
           </div>
-          <p class="profile-name">Downloading</p>
-          <p class="profile-handle">@layabubing</p>
-          <p class="profile-caption">从一个问题开始，<br>慢慢写成一个项目。</p>
-          <a href="about.html">更多关于我 <span aria-hidden="true">↗</span></a>
+          <div class="deck-controls" hidden>
+            <button type="button" class="spin-switch" aria-pressed="false">转动唱片</button>
+            <label class="speed">转速 <input type="range" min="8" max="45" value="24" aria-label="唱片转速，每分钟转数"><output>24 RPM</output></label>
+          </div>
+          <div class="sleeve-note"><span>从一个问题开始，慢慢写成一个项目。</span><a href="about.html">关于我 ↗</a></div>
         </aside>
       </section>
 
@@ -79,5 +82,6 @@
       <a href="#top">回到顶部 ↑</a>
     </footer>
     <script src="js/projects.js?v=20261016"></script>
+    <script src="js/turntable.js?v=20261118"></script>
   </body>
 </html>
