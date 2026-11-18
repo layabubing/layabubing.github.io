@@ -27,8 +27,14 @@ img { max-width: 100%; height: auto; }
 .brand { display: inline-flex; align-items: center; gap: 11px; margin-right: auto; font-family: var(--font-serif); font-size: 18px; }
 .brand img { width: 25px; height: 25px; border-radius: 50%; }
 .site-nav { display: flex; gap: 29px; align-items: center; }
-.site-nav a { padding: 9px 0; color: var(--muted); font-size: 13px; }
-.site-nav a:hover, .site-nav a[aria-current] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 10px; }
+.site-nav a { position: relative; padding: 9px 0; color: var(--muted); font-size: 13px; }
+.site-nav a::after { content: ""; position: absolute; inset: auto 0 5px; border-bottom: 1px solid currentColor; transform: scaleX(0); transform-origin: left; transition: transform 180ms ease-out; }
+.site-nav a:is([aria-current], :focus-visible, :active) { color: var(--ink); }
+.site-nav a:is([aria-current], :focus-visible, :active)::after { transform: scaleX(1); }
+@media (hover: hover) {
+  .site-nav a:hover { color: var(--ink); }
+  .site-nav a:hover::after { transform: scaleX(1); }
+}
 .header-link { font-family: var(--font-mono); font-size: 12px; }
 .header-link span { margin-left: 6px; }
 
@@ -58,7 +64,7 @@ img { max-width: 100%; height: auto; }
 .signal-orbit-inner::before { background: var(--accent); }
 @keyframes orbit { to { transform: translate(-50%, -50%) rotate(360deg); } }
 .row-link { display: inline-flex; align-items: center; gap: 12px; width: fit-content; padding: 3px 0; border-bottom: 1px solid var(--line); font-size: 12px; white-space: nowrap; transition: color 160ms ease, border-color 160ms ease; }
-.row-link:hover { border-color: var(--accent); }
+.row-link:is(:hover, :focus-visible, :active) { border-color: var(--accent); }
 
 .page-head { padding: 70px 0 50px; border-bottom: 1px solid var(--ink); }
 .page-title { margin: 0 0 24px; font-family: var(--font-serif); font-size: clamp(38px, 5vw, 56px); font-weight: 400; letter-spacing: 0.03em; line-height: 1.35; }
@@ -173,7 +179,6 @@ h2 { margin-bottom: 0; font-family: var(--font-serif); font-size: 25px; font-wei
   .header-link { order: 1; font-size: 11px; }
   .site-nav { order: 2; justify-content: space-between; width: 100%; margin-top: 18px; gap: 16px; }
   .site-nav a { padding: 7px 0; font-size: 12px; }
-  .site-nav a[aria-current], .site-nav a:hover { text-underline-offset: 7px; }
   .hero { grid-template-columns: 1fr; gap: 36px; padding: 46px 0 36px; }
   .hero h1 { font-size: clamp(39px, 10.4vw, 62px); margin-left: -2px; margin-bottom: 26px; }
   .eyebrow { font-size: 10px; margin-bottom: 20px; }
@@ -221,6 +226,24 @@ h2 { margin-bottom: 0; font-family: var(--font-serif); font-size: 25px; font-wei
   .post-heading { font-size: 32px; }
   .site-footer { flex-wrap: wrap; gap: 12px; min-height: 100px; }
   .site-footer span:nth-child(2) { order: 3; flex-basis: 100%; font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-foot .row-link, .header-link, .profile-note a, .contact-list a, .post-item { --arrow-lift: -3px; }
+  :is(.row-link, .header-link, .profile-note a) > span,
+  .contact-list a::after, .post-item::after {
+    display: inline-block;
+    transform: var(--arrow-offset, none);
+    transition: transform 160ms ease-out;
+  }
+  :is(.row-link, .header-link, .profile-note a, .contact-list a, .post-item):is(:focus-visible, :active) {
+    --arrow-offset: translate(3px, var(--arrow-lift, 0px));
+  }
+  @media (hover: hover) {
+    :is(.row-link, .header-link, .profile-note a, .contact-list a, .post-item):hover {
+      --arrow-offset: translate(3px, var(--arrow-lift, 0px));
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
