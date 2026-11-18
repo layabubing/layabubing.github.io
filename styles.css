@@ -55,21 +55,18 @@ img { max-width: 100%; height: auto; }
 .record { position: absolute; left: 6%; top: 6%; height: 88%; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: repeating-radial-gradient(circle, transparent 0 2px, #ffffff1c 2.5px, transparent 3.5px), conic-gradient(from 24deg, #141511, #474943 12%, #171814 24%, #20211b 50%, #55564e 64%, #191a16 78%, #141511); box-shadow: 1px 3px 4px #47200e; touch-action: none; user-select: none; cursor: grab; }
 .record:active { cursor: grabbing; }
 .record-avatar { width: 30%; border: 3px solid var(--amber); border-radius: 50%; pointer-events: none; }
-.record-labels { position: absolute; inset: 0; container-type: inline-size; transform: rotate(var(--rotation, 0deg)); pointer-events: none; }
-.inner-ring { --radius: 25cqi; }
-.outer-ring { --radius: 40.5cqi; }
+.record-labels { position: absolute; inset: 0; transform: rotate(var(--rotation, 0deg)); pointer-events: none; }
 .record-labels img {
   position: absolute;
-  top: calc(50% - var(--radius) * cos(var(--angle)));
-  left: calc(50% + var(--radius) * sin(var(--angle)));
-  width: 10.5%;
+  top: var(--y);
+  left: var(--x);
+  width: var(--size);
   aspect-ratio: 1;
   border: 1px solid #eee8d6;
   border-radius: 23%;
   box-shadow: 0 1px 2px #16150fc9;
-  transform: translate(-50%, -50%) rotate(-5deg);
+  transform: translate(-50%, -50%) rotate(var(--tilt));
 }
-.record-labels img:nth-child(even) { transform: translate(-50%, -50%) rotate(6deg); }
 .record::before { content: ""; position: absolute; inset: 3%; border-radius: 50%; background: conic-gradient(from var(--rotation, 0deg), #efdfb8 0deg 2deg, transparent 2deg); mask: radial-gradient(closest-side, transparent 94%, black 95%); }
 .record::after { content: ""; position: absolute; width: 2.4%; aspect-ratio: 1; border-radius: 50%; background: #dfd9c6; box-shadow: 0 1px 2px #30291e; }
 .tonearm { position: absolute; top: 14%; right: 10%; width: 7px; height: 70%; transform-origin: 50% 0; transform: rotate(9deg); background: linear-gradient(90deg, #635948, #fff1cf 48%, #978872); border-radius: 100px; box-shadow: 2px 3px 3px #522b1f80; pointer-events: none; transition: transform 240ms ease-out; }
